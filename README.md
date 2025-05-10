@@ -1,12 +1,86 @@
-# React + Vite
+# 🎬 Movie Finder App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web construida con **React** que permite buscar y explorar películas populares, con paginación, búsqueda en tiempo real y un diseño moderno utilizando **Tailwind CSS**.
 
-Currently, two official plugins are available:
+![App Screenshot](./demo.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Características
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 Búsqueda de películas en tiempo real con debounce
+- 📄 Paginación interactiva con estados activos y botones "Prev" / "Next"
+- 🎞️ Listado de películas populares y trending
+- ⏳ Indicador de carga (spinner y skeletons)
+- 📱 Diseño responsivo con Tailwind CSS
+- 🌐 Consumo de la API de TheMovieDB (TMDb)
+- ♻️ Manejo de estado y efectos con React Hooks (`useState`, `useEffect`, `useDebounce`)
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- React.js
+- Tailwind CSS
+- Axios
+- React-use (para `useDebounce`)
+- Appwrite (para estadísticas de búsqueda, opcional)
+- TheMovieDB API
+
+---
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/DevWilfredo/movie-app
+cd movie-app
+```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Crea un archivo `.env` con tu API key de TMDB:
+
+```env
+VITE_TMDB_KEY=your_tmdb_token_here
+```
+
+4. Ejecuta la aplicación en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/
+│   ├── Search.jsx
+│   ├── Spinner.jsx
+│   ├── MovieCard.jsx
+│   ├── Pagination.jsx
+│   └── SkeletonMovieCard.jsx
+├── appwrite.js         # Funciones auxiliares para Appwrite
+├── App.jsx             # Componente principal
+├── main.jsx            # Punto de entrada de la aplicación
+```
+
+---
+
+## 📃 Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y compartirlo libremente.
+
+---
+
+## 🤝 Contribuciones
+
+¡Contribuciones, ideas y sugerencias son bienvenidas! Abre un issue o pull request 🚀
