@@ -35,7 +35,7 @@ const App = () => {
   const fetchMovies = async (query = "", page = 1) => {
     setIsLoading(true);
     setErrorMessage("");
-    await new Promise((resolve) => setTimeout(resolve, 300000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     try {
       const endpoint = query
         ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
