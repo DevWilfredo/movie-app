@@ -35,7 +35,7 @@ const App = () => {
   const fetchMovies = async (query = "", page = 1) => {
     setIsLoading(true);
     setErrorMessage("");
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 300000));
     try {
       const endpoint = query
         ? `${API_BASE_URL}/search/movie?query=${encodeURIComponent(query)}`
@@ -116,7 +116,7 @@ const App = () => {
             <h2>All movies</h2>
             {isLoading ? (
               <>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                   {Array.from({ length: 20 }).map((_, index) => (
                     <SkeletonMovieCard key={index} />
                   ))}
